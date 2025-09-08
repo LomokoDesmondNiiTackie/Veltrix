@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <section className="w-full h-screen flex flex-col justify-center items-center gap-6 lg:gap-0  lg:grid grid-cols-2 divide-x-2 divide-neutral-gray/30 lg:p-50
       relative
@@ -13,11 +13,13 @@ export default function LoginPage() {
       </div>
       <div className=" w-full md:w-4/5 lg:w-full flex flex-col justify-center items-center gap-7 ">
           <form action="" method="post" className="w-4/5 flex flex-col justify-center items-center gap-7" >
+            <input type="text" name="" id="" className="h-15 w-full lg:w-lg border-2 border-brand-teal rounded-lg font-semibold pl-2 " placeholder="user name" />
             <input type="email" name="" id="" className="h-15 w-full lg:w-lg border-2 border-brand-teal rounded-lg font-semibold pl-2 " placeholder="email: example@gmail.com" />
             <input type="password" name="" id="" className=" h-15 w-full lg:w-lg border-2 border-brand-teal rounded-lg font-semibold pl-2" placeholder="Password: 8+ characters long" />
+            <input type="password" name="" id="" className=" h-15 w-full lg:w-lg border-2 border-brand-teal rounded-lg font-semibold pl-2" placeholder="Confirm password" />
             <button type="submit" className="h-15 w-full lg:w-lg bg-brand-teal rounded-lg text-neutral-light font-semibold" >sign up</button>
           </form>
-          <div className="login text-neutral-gray text-lg font-semibold">Already have an account - <Link href={'/sign-up'} className="text-danger underline italic">Sign up</Link></div>
+          <div className="login text-neutral-gray text-lg font-semibold">Already have an account - <Link href={'/login'} className="text-danger underline italic">Login</Link></div>
       </div>
     </section>
   );
