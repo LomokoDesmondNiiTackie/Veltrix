@@ -17,7 +17,7 @@ export default function LoginPage() {
             <input type="password" name="" id="" className=" h-15 w-full lg:w-lg border-2 border-brand-teal rounded-lg font-semibold pl-2" placeholder="Password: 8+ characters long" />
             <button type="submit" className="h-15 w-full lg:w-lg bg-brand-teal rounded-lg text-neutral-light font-semibold" >sign up</button>
           </form>
-          <div className="login text-neutral-gray text-lg font-semibold">Already have an account - <Link href={'/sign-up'} className="text-danger underline italic">Sign up</Link></div>
+          <div className="login text-neutral-gray text-lg font-semibold">Create an account - <Link href={'/sign-up'} className="text-danger underline italic">Sign up</Link></div>
       </div>
     </section>
   );
