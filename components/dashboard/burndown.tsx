@@ -54,7 +54,7 @@ export default function BurndownOrProgress() {
 
   const burndownOptions: ChartOptions<"line"> = {
     responsive: true,
-    maintainAspectRatio: false, // 🔑 lets us size with Tailwind
+    maintainAspectRatio: false,
     plugins: {
       legend: { position: "top" },
       title: {
@@ -87,7 +87,6 @@ export default function BurndownOrProgress() {
 
   return (
     <div className="w-full lg:w-3/5 mx-auto bg-white shadow-soft rounded-2xl p-4">
-      {/* Chart container: responsive height */}
       <div className="relative h-[300px] sm:h-[400px] md:h-[280px] lg:h-[320px]">
         <Line data={burndownData} options={burndownOptions} />
       </div>

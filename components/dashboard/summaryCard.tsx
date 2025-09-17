@@ -3,7 +3,7 @@ import React from "react";
 interface SummaryCardProps {
   readonly title: string;
   readonly value: string | number;
-  readonly icon: React.ElementType; // 👈 This is key
+  readonly icon: React.ElementType;
   readonly iconColor: string;
   readonly backgroundColor?: string;
   readonly borderColor?: string;
@@ -13,7 +13,7 @@ interface SummaryCardProps {
 export default function SummaryCard({
   title,
   value,
-  icon: Icon, // 👈 Rename so we can use JSX
+  icon: Icon,
   iconColor,
   backgroundColor,
   borderColor,
@@ -27,7 +27,7 @@ export default function SummaryCard({
           <p className={`text-[3.5em] ${textColor} font-bold`}>{value}</p>
         </div>
         <div className={` w-[40%] h-[80%] flex justify-center items-center ${iconColor} hidden lg:flex`}>
-          <Icon className="h-20 w-20" /> {/* 👈 Direct JSX, no createElement */}
+          <Icon className="h-20 w-20" />
         </div>
       </div>
     </div>

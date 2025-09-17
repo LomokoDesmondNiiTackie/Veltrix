@@ -10,7 +10,7 @@ type Todo = {
   description?: string;
   priority: Priority;
   completed: boolean;
-  date: string; // Date.prototype.toDateString()
+  date: string; 
   status: Status;
 };
 
@@ -52,7 +52,7 @@ export default function UpcomingDeadlines({ todos }: Props) {
 
   return (
     <div className="w-full min-h-1/2 rounded-xl bg-white shadow-md border border-gray-100 overflow-hidden  ">
-      <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between sticky top-0 bg-white">
+      <div className="deadLineHead px-5 py-4 border-b border-gray-100 flex items-center justify-between sticky top-0 bg-white">
         <h2 className="text-lg font-bold text-neutral-dark/80 tracking-tight">
           Upcoming Deadlines
         </h2>
@@ -62,11 +62,11 @@ export default function UpcomingDeadlines({ todos }: Props) {
       </div>
 
       {upcoming.length === 0 ? (
-        <div className="px-6 py-10 text-center text-gray-400 text-sm">
+        <div className="noUpcomingDeadlines px-6 py-10 text-center text-gray-400 text-sm">
           🎉 No upcoming deadlines
         </div>
       ) : (
-        <div className=" max-h-70 overflow-y-auto px-4 py-2">
+        <div className="UpcomingDeadlines max-h-70 overflow-y-auto px-4 py-2">
           <ul className=" divide-y divide-gray-100 flex-1 overflow-y-auto">
             {upcoming.map((t) => (
               <li
@@ -103,7 +103,7 @@ export default function UpcomingDeadlines({ todos }: Props) {
                           if (t.priority === "high") return "text-red-600";
                           if (t.priority === "medium") return "text-amber-600";
                           if (t.priority === "low") return "text-green-600";
-                          return "text-gray-600"; // fallback
+                          return "text-gray-600";
                         })()
                       }`}
                     >
@@ -119,7 +119,7 @@ export default function UpcomingDeadlines({ todos }: Props) {
                       if (t.status === "todo") return "bg-gray-100 text-gray-700";
                       if (t.status === "inprogress") return "bg-blue-100 text-blue-700";
                       if (t.status === "done") return "bg-green-100 text-green-700";
-                      return "bg-gray-200 text-gray-500"; // fallback
+                      return "bg-gray-200 text-gray-500";
                     })()
                   }`}
                 >
