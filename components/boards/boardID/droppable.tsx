@@ -53,7 +53,7 @@ export default function DroppableColumn({
     >
       {/* Header */}
       <div
-        className={`px-4 py-3 flex items-center justify-between rounded-sm ${background}`}
+        className={`sticky top-0 px-4 py-3 flex items-center justify-between rounded-sm ${background}`}
        >
         <h3 className="text-sm font-semibold text-gray-800">
           {title}{" "}
